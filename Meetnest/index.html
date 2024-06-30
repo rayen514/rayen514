@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateforme de Partage - Pour Scientifiques</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Meetnest</h1>
+        <a href="videos.html">Vidéos</a>
+    </div>
+
+    <div class="container">
+        <div class="profile-container">
+            <h2>Créer Profil</h2>
+            <input type="text" id="profileName" placeholder="Nom de profil">
+            <input type="file" id="profilePicture" accept="image/*">
+            <button onclick="createProfile()">Créer</button>
+        </div>
+        <button id="deleteAllButton" onclick="deleteAllPosts()">Supprimer tous les messages</button>
+        <h1>Messages, Images et Fichiers</h1>
+        <div id="postForm">
+            <textarea id="postText" placeholder="Que voulez-vous partager aujourd'hui ?"></textarea>
+            <input type="file" id="postFile" accept="image/*,video/*">
+            <button onclick="createPost()">Partager</button>
+        </div>
+        <div id="postsContainer"></div>
+    </div>
+
+    <div id="chatContainer" class="chat-container">
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Tapez un message...">
+            <button onclick="sendMessage()">Envoyer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
